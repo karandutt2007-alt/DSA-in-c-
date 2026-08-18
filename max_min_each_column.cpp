@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int arr[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    for(int j = 0; j < 3; j++)
+    {
+        int maxi = arr[0][j];
+        int mini = arr[0][j];
+
+        for(int i = 0; i < 3; i++)
+        {
+            maxi = max(maxi, arr[i][j]);
+            mini = min(mini, arr[i][j]);
+        }
+
+        cout << "Column " << j + 1
+             << " Max = " << maxi
+             << " Min = " << mini << endl;
+    }
+
+    return 0;
+}
